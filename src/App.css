@@ -49,3 +49,17 @@ img {
 h2, h3 {
   display: inline;
 }
+
+p {
+  font-size: larger;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  border: 2px solid blueviolet;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}

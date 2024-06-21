@@ -1,9 +1,8 @@
-
 function Home() {
     return (
         <div>
-            <h1>Hello from homepage!</h1>
-            <p>So, how are you?</p>
+            <h1>Very Awesome Shop</h1>
+            <p>Head over to the Products section to browse our stock</p>
         </div>
     );
 }

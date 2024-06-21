@@ -6,13 +6,17 @@ function Cart() {
     return (
         <div>
             <h1>Cart</h1>
-            <br />
             <button disabled>Checkout</button>
+            <br /><br />
             {cart.map((item, index) => {
                 return (
-                    <div key={index}>
+                    <div className="item" key={index}>
                         <img src={item.img} alt={item.name} />
-                        <h2>{item.amount} x</h2> <h3>{item.name}</h3>
+
+                        <div>
+                            <h2>{item.name}</h2><br />
+                            Quantity: <h3>{item.amount}</h3>                            
+                        </div>
                     </div>
                 );
             })}

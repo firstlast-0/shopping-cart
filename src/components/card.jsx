@@ -56,17 +56,20 @@ const Card = () => {
 
     return (
         <>
-            <h1>Shop</h1>
+            <h1>Products</h1>
             <h2>Items in Cart: {total}</h2><br />
             <Link to="/shop/cart"><button>Go to Cart</button></Link>
+            <br /><br />
             {imageURL.map((img, index) => {
                 return (
-                    <div key={index}>
-                        <img src={img.image} alt={img.title} />
-                        <h3>{img.title}</h3>
-                        <input type="number" name={index} />
-                        <Link to="/shop/cart"><button onClick={() => addToCart(index, img.title, img.image)}>Add to cart</button></Link>
-                        
+                    <div className='item' key={index}>
+                        <div><img src={img.image} alt={img.title} /></div>
+
+                        <div>
+                            <h3>{img.title}</h3><br /><br />
+                            Quantity: <input type="number" name={index} />&nbsp;
+                            <Link to="/shop/cart"><button onClick={() => addToCart(index, img.title, img.image)}>Add to cart</button></Link>
+                        </div>                        
                     </div>
                 );
             })}
