@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { useOutletContext, Outlet } from "react-router-dom";
 
 function Shop() {

@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
     return (
-        <div>
-            <h1>Very Awesome Shop</h1>
-            <p>Head over to the Products section to browse our stock</p>
+        <div className="home">
+            <h1>FAKE STORE</h1>
+            <p>This website uses data from the Fake Store API. Head over to the Shop section to browse our stock</p>
+            <Link to="/shop"><button>SHOP NOW</button></Link>            
         </div>
     );
 }

@@ -7,7 +7,7 @@ function App() {
     const [cart, setCart] = useState([]);
 
     return (
-        <div>
+        <div className='hom'>
             <Nav />
             <Outlet context={[cart, setCart]} />
         </div>
