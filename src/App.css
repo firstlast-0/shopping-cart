@@ -65,11 +65,19 @@ nav > ul {
     gap: 15px;
 }
 
+.selected {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(93%) saturate(15%) hue-rotate(115deg) brightness(96%) contrast(101%);
+}
+
 nav img {
     width: 50px;
     height: 50px;
+}
+
+nav img, button > img {
     filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(0%) hue-rotate(187deg) brightness(108%) contrast(102%);
 }
+
 
 nav img:hover {
     animation-name: grow;
@@ -100,16 +108,25 @@ nav img:hover {
     font-size: 1.5rem;
 }
 
-h1 {
+.home > h1 {
     font-size: 7rem;
     font-style: italic;
+}
+
+h1 {
     margin: 0;
-    
 }
 
 img {
     width: 150px;
     height: 150px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 150px;
 }
 
 h2,h3 {
@@ -123,9 +140,36 @@ p {
 .item {
     display: flex;
     gap: 15px;
-    border: 2px solid blueviolet;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 15px;
     text-align: left;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    color: lightgreen;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.quantity {
+    width: 50px;
+}
+
+.addToCart {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(0, 0, 124);
+}
+
+button > img {
+    width: 20px;
+    height: 20px;
 }

@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { Outlet } from "react-router-dom";
-import Nav from './components/nav.jsx';
+import { useState, useEffect } from 'react';
+import { Outlet, useLocation } from "react-router-dom";
+import Nav from './components/nav';
+
 import './App.css';
 
 function App() {
     const [cart, setCart] = useState([]);
 
     return (
-        <div className='hom'>
-            <Nav />
+        <div>
+            <Nav></Nav>
             <Outlet context={[cart, setCart]} />
         </div>
     );

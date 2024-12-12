@@ -5,6 +5,7 @@ function Cart() {
 
     return (
         <div>
+            
             <h1>Cart</h1>
             <button disabled>Checkout</button>
             <br /><br />
