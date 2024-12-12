@@ -5,7 +5,7 @@ function Home() {
         <div className="home">
             <h1>FAKE STORE</h1>
             <p>This website uses data from the Fake Store API. Head over to the Shop section to browse our stock</p>
-            <Link to="/shop"><button>SHOP NOW</button></Link>
+            <Link to="/shop"><button className='addToCart'>SHOP NOW</button></Link>
         </div>
     );
 }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Outlet, useLocation } from "react-router-dom";
+import { useState } from 'react';
+import { Outlet } from "react-router-dom";
 import Nav from './components/nav';
 
 import './App.css';
@@ -9,7 +9,7 @@ function App() {
 
     return (
         <div>
-            <Nav></Nav>
+            <Nav cart={cart} />
             <Outlet context={[cart, setCart]} />
         </div>
     );
