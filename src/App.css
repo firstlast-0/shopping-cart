@@ -213,3 +213,20 @@ button > img {
     width: 20px;
     height: 20px;
 }
+
+.cart {
+    display: flex;
+    gap: 30px;
+    padding: 70px 50px;
+}
+
+.cartInfo {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    height: fit-content;
+    width: 500px;
+}
+
+.cart > div:first-child {
+    flex-grow: 1;
+}
