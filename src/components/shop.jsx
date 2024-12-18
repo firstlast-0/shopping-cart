@@ -1,4 +1,4 @@
-import { useOutletContext, Link } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import cartIcon from '/cart.svg';
 import PropTypes from 'prop-types';
@@ -28,22 +28,27 @@ const useImageURL = () => {
 };
 
 const Shop = () => {
-    const [cart, setCart] = useOutletContext();    
+    const [cart, setCart] = useOutletContext();
+    let navigate = useNavigate();
 
     function addToCart(index, name, price, img) {
         let cartCopy = cart.slice();
         let no = +document.querySelector(`input[name='${index}']`).value;
+        if (!no) {
+            return;
+        }
 
         for (let item of cartCopy) {
             if (item.name === name) {
                 item.amount += no;
-                setCart(cartCopy);
+                setCart(cartCopy);                
                 return;
             }
         }
 
         cartCopy.push({name, amount: no, price, img});
         setCart(cartCopy);
+        navigate('/cart');
     }
 
     let { imageURL, error, loading } = useImageURL(); 
@@ -75,10 +80,10 @@ const Shop = () => {
                                 <div className="price">${img.price}</div>
                                 <div className="actions">
                                     Quantity: <input type="number" className="quantity" name={index} />
-                                    <Link to="/cart"><button className="addToCart" onClick={() => addToCart(index, img.title, img.price, img.image)}>
+                                    <button className="addToCart" onClick={() => addToCart(index, img.title, img.price, img.image)}>
                                             <img src={cartIcon} alt="cart" />
                                             Add to cart
-                                    </button></Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
