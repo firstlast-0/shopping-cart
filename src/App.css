@@ -99,13 +99,13 @@ nav img:hover {
 }
 
 .home {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
-    width: fit-content;
+    width: 800px;
     padding: 20px;
     margin: 150px auto;
     border-radius: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .home > h1 {
@@ -175,6 +175,7 @@ p {
     padding: 15px;
     margin-bottom: 15px;
     text-align: left;
+    position: relative;
 }
 
 .info {
@@ -229,4 +230,20 @@ button > img {
 
 .cart > div:first-child {
     flex-grow: 1;
+}
+
+.remove {
+    background-color: darkred;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.remove:hover {
+    background-color: red;
+    border: 0;
 }

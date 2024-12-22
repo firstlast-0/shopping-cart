@@ -29,7 +29,7 @@ function Cart() {
                                     <h2>{item.name}</h2><br />
                                     Quantity: <h3>{item.amount}</h3><br />
                                     Total Price: <h3>${item.price * item.amount}</h3><br />
-                                    <button onClick={() => {removeHandler(index)}}>Remove</button>
+                                    <button className="remove" onClick={() => {removeHandler(index)}}>x</button>
                                 </div>
                             </div>
                         );
