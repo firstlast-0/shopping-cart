@@ -1,11 +1,10 @@
-import { Link, useLocation, useOutletContext } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useRef, useEffect } from 'react';
 import home from '/home.svg';
 import shop from '/shop.svg';
 import cartIcon from '/cart.svg';
 
 const Nav = (props) => {
-    // const [cart, setCart] = useOutletContext();
     let total = 0;
     for (let item of props.cart) {
         total += item.amount;
